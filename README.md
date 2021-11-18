@@ -11,3 +11,4 @@
 **5. Export features to Sagemaker Feature Store**
 
 **6. Build, Train and Test your xgboost model**
+https://github.com/ajayravindranathan/tlc303/blob/main/TLC303-CustomerChurnPrediction-FeatureStore-XGBoost.ipynb
