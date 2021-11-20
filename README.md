@@ -7,6 +7,10 @@ https://github.com/ajayravindranathan/tlc303/blob/main/Launch_Amazon_Sagemaker.m
 
 **2. Permit Sagemaker from Consumer account to access catalog and underlyting data**
 
+Please follow the instructions in the below link:
+https://github.com/ajayravindranathan/tlc303/blob/main/lakeformation_permissions_amazon_sagemaker.md
+
+
 **3. Ingest data using Sagemaker Data Wrangler**
 
 **4. Feature Engineering**
