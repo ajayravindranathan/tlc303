@@ -20,15 +20,73 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 
 <img width="1266" alt="Screenshot 2021-11-20 at 06 58 16" src="https://user-images.githubusercontent.com/81493814/142717743-8ce4ec15-1dee-49c5-83fa-aff78ed7cae4.png">
 
+
 4. Leave the Quick setup option selected
 
 <img width="868" alt="Screenshot 2021-11-20 at 07 01 12" src="https://user-images.githubusercontent.com/81493814/142717810-14725823-48a9-40ed-9b64-a2a97a1cdaab.png">
 
-5. Select "Create new role"
+
+5. Give a name for the user profile as below.
+
+<img width="848" alt="Screenshot 2021-11-20 at 08 04 43" src="https://user-images.githubusercontent.com/81493814/142719257-b45d1c01-cba0-4343-b7b8-94c336924411.png">
+
+
+6. Select "Create new role"
 
 <img width="840" alt="Screenshot 2021-11-20 at 07 13 02" src="https://user-images.githubusercontent.com/81493814/142718025-c53ee80b-23bf-4813-a659-bf2a12a5d1c7.png">
 
-6. 
+
+7. Keep the default and click Create Role.
+
+![image](https://user-images.githubusercontent.com/81493814/142718925-cf71a6d0-bac6-4dd4-a354-68dd51865abf.png)
+
+
+8. You will see that the role is successfully created.
+
+![image](https://user-images.githubusercontent.com/81493814/142718955-784fea77-ce85-4b24-ae73-c689c89e9adf.png)
+
+
+9. Choose the newly created role and click Submit.
+
+![image](https://user-images.githubusercontent.com/81493814/142718970-5bde18f6-4367-4a6d-8681-f69944213f99.png)
+
+
+10. The SageMaker Studio environment will stay in **Pending** state for a few minutes.
+
+![image](https://user-images.githubusercontent.com/81493814/142718987-8e33c530-1171-4ac5-8e62-6fd5988dc79e.png)
+
+
+11. After a few minutes, the state will transition to **Ready**.
+
+![image](https://user-images.githubusercontent.com/81493814/142719016-ba75784b-86d6-409a-ba40-1465477ce710.png)
+
+
+12. Once Amazon SageMaker Studio is ready then click on Open Studio. The page can take 1 or 2 minutes to load when you access SageMaker Studio for the first time.
+
+![image](https://user-images.githubusercontent.com/81493814/142719036-f0d23f96-63dd-4121-ac4b-3ddce6bc9e71.png)
+
+
+13. You will be redirected to a new web tab that looks like this:
+
+![image](https://user-images.githubusercontent.com/81493814/142719049-59de1a38-bdff-4ed9-ab1d-3b537c9e89b5.png)
+
+
+14. Under Notebooks and compute resources, make sure that the Data Science SageMaker image is selected and click on Notebook - Python 3.
+
+![image](https://user-images.githubusercontent.com/81493814/142719063-cc92e873-b268-458b-9743-0b43be180373.png)
+
+
+15. You will land in the Untitled.ipynb notebook.
+
+![image](https://user-images.githubusercontent.com/81493814/142719107-dede25cb-523f-4eb0-8e44-dd46afd95680.png)
+
+
+16. You can rename the notebook by right clicking on the name.
+
+![image](https://user-images.githubusercontent.com/81493814/142719135-f51183bd-019e-4a30-bf1f-af21ce462d8c.png)
+
+
+**Congratulations!!** You have successfully created a SageMaker Studio domain and launched a SageMaker Studio Notebook.
 
 **2. Permit Sagemaker from Consumer account to access catalog and underlyting data**
 
