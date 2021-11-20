@@ -23,7 +23,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 
 4. Leave the Quick setup option selected
 
-<img width="868" alt="Screenshot 2021-11-20 at 07 01 12" src="https://user-images.githubusercontent.com/81493814/142717810-14725823-48a9-40ed-9b64-a2a97a1cdaab.png">
+<img width="836" alt="Screenshot 2021-11-20 at 08 12 08" src="https://user-images.githubusercontent.com/81493814/142719445-0f5ed7fc-d10a-4b13-a445-538e830eb7e7.png">
 
 
 5. Give a name for the user profile as below.
@@ -33,7 +33,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 
 6. Select "Create new role"
 
-<img width="840" alt="Screenshot 2021-11-20 at 07 13 02" src="https://user-images.githubusercontent.com/81493814/142718025-c53ee80b-23bf-4813-a659-bf2a12a5d1c7.png">
+<img width="846" alt="Screenshot 2021-11-20 at 08 10 12" src="https://user-images.githubusercontent.com/81493814/142719392-0eabde8a-e033-49e4-b0db-3c284e04bcf7.png">
 
 
 7. Keep the default and click Create Role.
@@ -87,6 +87,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 
 
 **Congratulations!!** You have successfully created a SageMaker Studio domain and launched a SageMaker Studio Notebook.
+
 
 **2. Permit Sagemaker from Consumer account to access catalog and underlyting data**
 
