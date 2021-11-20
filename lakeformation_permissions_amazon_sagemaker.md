@@ -1,3 +1,5 @@
+# TLC303 - Use case 1 - Grant required permissions to Amazon Sagemaker using AWS LakeFormation
+
 This section deals with providing permissions in Lake Formation to the database and the tables to Amazon Sagemaker so that the xgboost model in Sagemaker can access the catalog and the underlying data from the producer account.
 
 1. Navigate to the home page of Amazon Sagemaker studio and copy/note the Execution role
@@ -14,7 +16,7 @@ Click on Create Database on the top right hand corner.
 
 <img width="765" alt="Screenshot 2021-11-20 at 13 46 40" src="https://user-images.githubusercontent.com/81493814/142728663-a086c25a-f382-4ff8-bfe8-90ef2b23a37e.png">
 
-Give the databse a name for example "local_tlc303" and click create.
+Give the databse a name for example "local_tlc303" and click "Create database".
 
 
 
@@ -50,7 +52,7 @@ Click on Grant on the top right hand corner
 
 <img width="1118" alt="Screenshot 2021-11-20 at 13 17 25" src="https://user-images.githubusercontent.com/81493814/142727796-51d4be5d-8552-4e84-ac6e-ce364b1cbc77.png">
 
-Search and select the Sagemaker execution role in the IAM users and roles field. Choose Named data and catalog resources in the LF-Tags or catalog resources section. Choose the database that was created in Step 3 above in the databases field. Select the resource links that you created in step 5 in the tables field.
+Search and select the Sagemaker execution role in the IAM users and roles field. Choose Named data and catalog resources in the LF-Tags or catalog resources section. Choose the database that was created in Step 2 above in the databases field. Select the resource links that you created in step 3 in the tables field.
 
 <img width="747" alt="Screenshot 2021-11-20 at 14 14 25" src="https://user-images.githubusercontent.com/81493814/142729518-c4679a1b-a984-45c4-92e5-700314712208.png">
 
@@ -72,3 +74,7 @@ Grant database creation priviledges to the Sagemaker execution role. This is so 
 On the below screen shot choose the Sagemaker execution role from the list of IAM users and roles
 
 <img width="536" alt="Screenshot 2021-11-20 at 13 10 13" src="https://user-images.githubusercontent.com/81493814/142727601-bf04fe2c-2016-4318-81ba-62171c5e072f.png">
+
+Click on Grant.
+
+**Congratulations!!** You have now provided the required permissions for Sagemaker to ingest data, run feature engineering tasks, train and test the model, and finally deploy a real-time endpoint for inference. 
