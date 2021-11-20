@@ -5,7 +5,7 @@
 Please follow the instructions in the below link:
 https://github.com/ajayravindranathan/tlc303/blob/main/Launch_Amazon_Sagemaker.md
 
-**2. Permit Sagemaker from Consumer account to access catalog and underlyting data**
+**2. Permit Sagemaker in the Consumer account to access catalog and underlyting data**
 
 Please follow the instructions in the below link:
 https://github.com/ajayravindranathan/tlc303/blob/main/lakeformation_permissions_amazon_sagemaker.md
