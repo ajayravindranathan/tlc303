@@ -3,6 +3,10 @@
 Without good data, machine learning models are pretty much rendered powerless. Hence, data preperation is a critical step in the machine learning lifecycle.
 In this section, we use the Data Wrangler module within Amazon Sagemaker to visually prepare and transform the data with the goal of preparing features that can be used by the xgboost model.
 
+We will use two datasets:
+1. The 5gcell data, which gives us information on the network performance over a period of a few months per 5gcell. 
+2. Customer churn data, which gives us historical data on each customers subscribed product features, price plans, usage and whether they churned or not.
+
 Please follow the following steps on the Amazon Sagemaker console - 
 
 1. Open the Sagemaker studio. On the left pane, click on the highlighted icon.
@@ -28,3 +32,14 @@ You can rename the newly created Flow by right-clicking on the tab. Provide any 
 
 Please note that the database and the tables will not appear if the permissions were not provided correctly on LakeFormation. Also, you should be able to see only the databases and tables that you provided permissions for in the previous step.
 
+4. In the highlighted box below, please enter the following query:
+
+`select * from <table_name>`
+
+<img width="1509" alt="Screenshot 2021-11-21 at 08 10 46" src="https://user-images.githubusercontent.com/81493814/142754685-c40dd663-f666-4257-b45c-f59b0bc21623.png">
+
+Unselect Enable Sampling as the data you are working with in this workshop in not too large. Sampling is checked by default assuming very large datasets (multiple GBs/TBs).
+
+Click on Run.
+
+Once you are able to see the results successfully, click on Import (Orange button on the top right).
