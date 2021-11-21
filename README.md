@@ -17,8 +17,9 @@ https://github.com/ajayravindranathan/tlc303/blob/main/DataPreparation_and_Featu
 
 **6. Build, Train and Test your xgboost model**
 
-Info : The below link shows the Amazon Sagemaker notebook you will be using:
-https://github.com/ajayravindranathan/tlc303/blob/main/TLC303-CustomerChurnPrediction-FeatureStore-XGBoost.ipynb
+Info : If you would like to just browse through the code in the jupyter notebook, the below link shows the Amazon Sagemaker notebook you will be using: https://github.com/ajayravindranathan/tlc303/blob/main/TLC303-CustomerChurnPrediction-FeatureStore-XGBoost.ipynb
+
+The actual steps to perform are as follows:
 
   1. Open a new terminal window on Sagemaker Studio
 
