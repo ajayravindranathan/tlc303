@@ -26,11 +26,13 @@ You can rename the newly created Flow by right-clicking on the tab. Provide any 
 
 <img width="499" alt="Screenshot 2021-11-21 at 07 48 20" src="https://user-images.githubusercontent.com/81493814/142754095-4c8c62c7-4530-45d4-90bc-8b1b11c5af52.png">
 
+
 3. Select the data catalog and the database that was created in the Datamesh setup lab. You should be able to see the tables on the right hand side as below - 
 
 <img width="1513" alt="Screenshot 2021-11-21 at 07 54 24" src="https://user-images.githubusercontent.com/81493814/142754251-a09cf878-2b7e-4bab-92e5-87517683def6.png">
 
 Please note that the database and the tables will not appear if the permissions were not provided correctly on LakeFormation. Also, you should be able to see only the databases and tables that you provided permissions for in the previous step.
+
 
 4. In the highlighted box below, please enter the following query:
 
@@ -43,3 +45,23 @@ Unselect Enable Sampling as the data you are working with in this workshop in no
 Click on Run.
 
 Once you are able to see the results successfully, click on Import (Orange button on the top right).
+
+<img width="409" alt="Screenshot 2021-11-21 at 08 27 32" src="https://user-images.githubusercontent.com/81493814/142755104-756c8dfd-1b6c-4cc7-92a7-2858a8cffed7.png">
+
+Give a name for the dataset for example tlc303-5gcell and then click Add.
+
+This will bring up the following screen where a validation process kicks off for the data being imported.
+
+<img width="1231" alt="Screenshot 2021-11-21 at 08 30 34" src="https://user-images.githubusercontent.com/81493814/142755217-cdffd55f-d9b0-4406-aea5-190c6c3fbd4e.png">
+
+Once validation is successful, you should see the screen as follows:
+
+<img width="1239" alt="Screenshot 2021-11-21 at 08 30 46" src="https://user-images.githubusercontent.com/81493814/142755205-997fd3e4-70a4-40a9-a202-cfa3ace85943.png">
+
+
+5. Repeat the steps in step 4 for the customer churn table as well.
+The screen should look as follows once you have finished this successfully:
+
+<img width="1494" alt="Screenshot 2021-11-21 at 08 38 14" src="https://user-images.githubusercontent.com/81493814/142755431-b9a4c732-6a1d-4778-834d-e053fa2d2e1c.png">
+
+
