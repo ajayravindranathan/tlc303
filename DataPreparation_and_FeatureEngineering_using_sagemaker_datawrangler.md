@@ -253,10 +253,12 @@ if event_time_feature_name is None:
    raise SystemExit("Select a column name as the event time feature name.")
 ```
 
-Next Update the following cell to switch off real-time inference. Change the `True` to `None`.
+Next Update the following cell to switch off real-time Feature Store. Change the `True` to `None`.
 
 <img width="1186" alt="Screenshot 2021-11-21 at 16 22 59" src="https://user-images.githubusercontent.com/81493814/142770266-42d2a36c-7160-491d-95fb-811354429319.png">
 
 Now you can run all cells and await the completion of the Jupyter notebook. Successful completion will look like the below screen shot:
 
 <img width="1354" alt="Screenshot 2021-11-21 at 16 24 52" src="https://user-images.githubusercontent.com/81493814/142770326-7e44c6cb-2838-4404-b047-ad5b591f222a.png">
+
+**Congratulations!!** You have completed Feature Engineering and have your features ready to be used from the Amazon Feature Store.
