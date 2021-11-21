@@ -216,4 +216,47 @@ e. Vectorise the column location_0 using the following options:
 
 f. Drop column location_0 usingthe drop column transform.
 
-g. 
+
+13. Export the featuures to the Feature Store
+
+Click on the Export tab as shown below:
+
+<img width="644" alt="Screenshot 2021-11-21 at 16 06 04" src="https://user-images.githubusercontent.com/81493814/142769589-4517916d-cd01-4b99-9648-6455d7e81898.png">
+
+Click on the final step and check all the transformation steps to include in the export.
+
+<img width="896" alt="Screenshot 2021-11-21 at 16 08 14" src="https://user-images.githubusercontent.com/81493814/142769658-143623f0-3eeb-42f4-97a5-4562f29ecf7c.png">
+
+Click on Export Step and choose 'Save to Sagemaker Featurestore via Jupyter notebook'
+
+<img width="439" alt="Screenshot 2021-11-21 at 16 08 58" src="https://user-images.githubusercontent.com/81493814/142769684-48befdac-38ee-4bfc-96ff-69f634ae88d6.png">
+
+This will trigger the creation of a jupyter notebook with pre-populated code for:
+1. Creation of the feature group and configuration of it
+2. Creation of a processing job to extract the data from source, run all the transformations in the flow and export to the feature store.
+
+Some configurations need to be done in this notebook to make it run:
+
+Update the first cell with 'FS_ID' and 'FS_time' as shown below
+
+<img width="1337" alt="Screenshot 2021-11-21 at 16 19 36" src="https://user-images.githubusercontent.com/81493814/142770132-625d584f-e231-4a1a-9761-6b058389aed6.png">
+
+For easy reference, you can replace the code with the following code block:
+
+```
+record_identifier_feature_name = 'FS_ID'
+if record_identifier_feature_name is None:
+   raise SystemExit("Select a column name as the feature group record identifier.")
+
+event_time_feature_name = 'FS_time'
+if event_time_feature_name is None:
+   raise SystemExit("Select a column name as the event time feature name.")
+```
+
+Next Update the following cell to switch off real-time inference. Change the `True` to `None`.
+
+<img width="1186" alt="Screenshot 2021-11-21 at 16 22 59" src="https://user-images.githubusercontent.com/81493814/142770266-42d2a36c-7160-491d-95fb-811354429319.png">
+
+Now you can run all cells and await the completion of the Jupyter notebook. Successful completion will look like the below screen shot:
+
+<img width="1354" alt="Screenshot 2021-11-21 at 16 24 52" src="https://user-images.githubusercontent.com/81493814/142770326-7e44c6cb-2838-4404-b047-ad5b591f222a.png">
