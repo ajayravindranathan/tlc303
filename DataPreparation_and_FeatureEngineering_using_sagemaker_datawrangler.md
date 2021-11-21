@@ -184,5 +184,31 @@ Click on Preview. Then click on Add.
 
 Repeat the above steps for vmail_plan column as well.
 
-b. 
-6. Now we will run an aggregation on the 5g cell data to get the average performance of the network at the locations.
+b. Next add a Custom Pandas transform in order to:
+ i. replace the churn values  - True. with 1 and False. with 0
+ ii. Add 2 columns 'FS_ID' and 'FS_time'. These columns are required in order to export the features to the feature store.
+ Code block as follows:
+ ```
+ import time
+ import pandas as pd
+ 
+ #change True. to 1 and False. to 0
+ df['churn'] = df['churn'].replace(regex=r'True.' , value='1')
+ df['churn'] = df['churn'].replace(regex=r'False.' , value='0')
+ 
+ # Add unique ID and event time for features store
+df['FS_ID'] = df.index + 1000
+current_time_sec = int(round(time.time()))
+df['FS_time'] = pd.Series([current_time_sec]*len(df), dtype="float64")
+```
+Then click first on Preview and after having verified the result, click on Add to add this transformation step to the list of all the other steps.
+
+c. Move the FS_ID and FS_time to the start of the columns. Please use the move column transform to achieve this.
+
+d. Drop the location_1 column as there are 2 coulmns location_0 and location_1, which are duplicates. Use the drop column transform to achieve this.
+
+e. Vectorise the column location_0 using the following options:
+
+<img width="369" alt="Screenshot 2021-11-21 at 15 59 33" src="https://user-images.githubusercontent.com/81493814/142769342-f3b104a8-d3cc-43f3-8766-614f5f73614b.png">
+<img width="367" alt="Screenshot 2021-11-21 at 15 59 49" src="https://user-images.githubusercontent.com/81493814/142769350-3d428934-a727-40a5-b0a5-383c1f4315a4.png">
+
