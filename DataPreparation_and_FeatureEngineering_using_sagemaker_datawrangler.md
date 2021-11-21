@@ -185,8 +185,9 @@ Click on Preview. Then click on Add.
 Repeat the above steps for vmail_plan column as well.
 
 b. Next add a Custom Pandas transform in order to:
- i. replace the churn values  - True. with 1 and False. with 0
- ii. Add 2 columns 'FS_ID' and 'FS_time'. These columns are required in order to export the features to the feature store.
+ i. Replace the churn values  - True. with 1 and False. with 0
+ ii. Replace the '-' in the phone number with '' to make it a number.
+ iii. Add 2 columns 'FS_ID' and 'FS_time'. These columns are required in order to export the features to the feature store.
  Code block as follows:
  ```
  import time
@@ -195,6 +196,7 @@ b. Next add a Custom Pandas transform in order to:
  #change True. to 1 and False. to 0
  df['churn'] = df['churn'].replace(regex=r'True.' , value='1')
  df['churn'] = df['churn'].replace(regex=r'False.' , value='0')
+ df['phone'] = df['phone'].replace(regex=r'-' , value='')
  
  # Add unique ID and event time for features store
 df['FS_ID'] = df.index + 1000
@@ -212,3 +214,6 @@ e. Vectorise the column location_0 using the following options:
 <img width="369" alt="Screenshot 2021-11-21 at 15 59 33" src="https://user-images.githubusercontent.com/81493814/142769342-f3b104a8-d3cc-43f3-8766-614f5f73614b.png">
 <img width="367" alt="Screenshot 2021-11-21 at 15 59 49" src="https://user-images.githubusercontent.com/81493814/142769350-3d428934-a727-40a5-b0a5-383c1f4315a4.png">
 
+f. Drop column location_0 usingthe drop column transform.
+
+g. 
