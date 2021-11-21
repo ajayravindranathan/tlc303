@@ -1,5 +1,7 @@
 # TLC303 - Use case 1 - Customer churn prediction using XGBOOST supervised binary classification
 
+Customer churn is a business challenge that all Communication Service Providers encounter on a daily basis. The goal of this use case is to look at historical data from the network, subscribed products, usage, and pricing that has been shared from a consumer account in order to predict the conditions under which a particular customer is likely to churn.
+
 This use case involves the following steps as listed below. Please browse to the respective readme files for each step and execute the steps in the specfied order below.
 
 **1. Launch Amazon Sagemaker Studio**
