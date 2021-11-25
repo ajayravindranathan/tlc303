@@ -10,7 +10,7 @@ The steps involved in this use case are as follows:
 
 **1. Launch a Quicksight account**
 
-On the search bar on the AWS Console, search for QuickSight
+On the search bar on the AWS Console, search for QuickSight and open this in a new browser tab. (You will need the AWS console tab shortly soon).
 
 <img width="699" alt="Screenshot 2021-11-21 at 21 35 27" src="https://user-images.githubusercontent.com/81493814/142779814-9b1c529a-4680-485a-bd28-a4427416956f.png">
 
@@ -22,11 +22,14 @@ Click on Sign up for QuickSight
 
 Leave the Enterprise option selected and click on Continue
 
-Provide an Account name and a Notification email address.
+
+Provide an Account name and a Notification email address. The account name should be unique so we suggest `TLC303-<your AWS consumer accountid>` or anything else that would make it unique.
 
 <img width="895" alt="Screenshot 2021-11-21 at 21 38 49" src="https://user-images.githubusercontent.com/81493814/142779920-7a81fbc7-d17a-4e1a-86c4-eb1b76c635cc.png">
 
-In addition to the services selected by default in the "Allow access and autodiscovery for these resources" section, please select S3 and then select all buckets.
+Please leave the services selected by default in the "Allow access and autodiscovery for these resources" as it is. Please ensure Athena is selected. 
+
+**Important** - Please use the same region as where your Lakeformation resources are deployed.
 
 <img width="774" alt="Screenshot 2021-11-21 at 21 42 14" src="https://user-images.githubusercontent.com/81493814/142779992-b0de3409-ef47-478f-abc1-67cadb3f55d0.png">
 
@@ -42,7 +45,7 @@ Navigate to the Amazon console and click on the CloudShell button to initiate a 
 
 Once the CloudShell environment is instantiated and you get the prompt, enter the following command. Please ensure to swap the account id with your account id.
 
-`aws quicksight list-users --aws-account-id <account_id> --namespace default --region us-east-1`
+`aws quicksight list-users --aws-account-id <account_id> --namespace default --region <your aws region>`
 
 This command should return an output similar to the following screenshot.
 
@@ -56,19 +59,32 @@ Copy the ARN of the user
 
 Navigate to LakeFormation console and click on Datalake permissions.
 
-Click on Grant
+Click on Grant. Click on SAML users and groups and provide the ARN of the Quicksight user in the 'SAML and Amazon QuickSight users and groups' field.
 
-<img width="619" alt="Screenshot 2021-11-21 at 22 01 11" src="https://user-images.githubusercontent.com/81493814/142780509-13fec016-70fa-4003-8c31-a98412802eb3.png">
+<img width="612" alt="Screenshot 2021-11-25 at 19 42 16" src="https://user-images.githubusercontent.com/81493814/143493982-0023e48c-d804-474f-ad2a-1a898a2aac84.png">
 
-<img width="575" alt="Screenshot 2021-11-21 at 22 01 28" src="https://user-images.githubusercontent.com/81493814/142780514-958b930f-a517-4f61-9d8c-67c730eee9aa.png">
+Choose the database that has been shared with you via the Data mesh and the tables for use case 1 and use case 2 (you will use this later in use case 2).
+
+Please select **Select** and **Describe** permissions.
+
+![image (5)](https://user-images.githubusercontent.com/81493814/143493836-80fa0e19-9f91-469c-babf-e4ffa9ee1dd2.png)
+
 
 **3. Add the dataset**
 
+Click on the Quicksight icon at the top left of the screen on the Quicksight console. Click on Datasets on the left hand pane. 
+
+
 Click on Datasets on the home screen.
+
+![image (6)](https://user-images.githubusercontent.com/81493814/143495093-1b02e4a4-672b-49d9-8f5a-a1845b898cf9.png)
+
+
+Click on New dataset. (Ignore the sample datasets. You may not see sample datasets sometimes.)
+
 
 <img width="909" alt="Screenshot 2021-11-21 at 23 19 44" src="https://user-images.githubusercontent.com/81493814/142782885-8ecfe14a-63a7-40df-b2e4-98113a49dfde.png">
 
-Click on New dataset
 
 Choose Athena on the following screen
 
@@ -78,10 +94,11 @@ Give a name for the dataset in the Data source name field. Leave he Athen workgr
 
 <img width="600" alt="Screenshot 2021-11-21 at 23 21 04" src="https://user-images.githubusercontent.com/81493814/142782919-26b6faba-3812-46b1-985c-ea5a38c13338.png">
 
-On the following screen choose n3_throughput and click on Select.
-The database and the table will not appear if the permissions in Lakeformation have not been provided correctly.
+On the following screen, the shared database must appear in the database field. Choose the use case 1 table and click on Select.
 
-<img width="597" alt="Screenshot 2021-11-21 at 23 22 58" src="https://user-images.githubusercontent.com/81493814/142782967-1e0f0913-87a9-4906-8784-1a4b46ddf1ee.png">
+The database and the table **will not** appear if the permissions in Lakeformation have not been provided correctly.
+
+![image (7)](https://user-images.githubusercontent.com/81493814/143495711-992f51ab-9bef-4727-9c01-82e605a1cc61.png)
 
 Leave the defaults on the following screen and click on Visualize
 
@@ -89,17 +106,18 @@ Leave the defaults on the following screen and click on Visualize
 
 **4. Configure the dataset**
 
-Go to datasets, click on n3_throughput, click on edit dataset
+Go to datasets, click on the dataset you just created, click on ***Edit dataset**
 
 <img width="600" alt="Screenshot 2021-11-21 at 23 09 39" src="https://user-images.githubusercontent.com/81493814/142782606-88181cef-37cc-4ef9-8f96-2e2a3cd5d0ac.png">
 
-Update the datatype of date_timestamp to Date as in the following screen shots
+Update the datatype of date_timestamp column to Date as in the following screen shots
 
 <img width="509" alt="Screenshot 2021-11-21 at 23 12 25" src="https://user-images.githubusercontent.com/81493814/142782708-2be50272-dc00-4a9e-891f-beb863ccafa8.png">
 
 <img width="908" alt="Screenshot 2021-11-21 at 23 11 51" src="https://user-images.githubusercontent.com/81493814/142782685-d397c395-1516-445e-b018-bf8b7e57b6ae.png">
 
-<img width="599" alt="Screenshot 2021-11-21 at 23 13 43" src="https://user-images.githubusercontent.com/81493814/142782736-d149e403-e336-4f08-9f76-c52841c4a307.png">
+![image (8)](https://user-images.githubusercontent.com/81493814/143495983-1adff7a9-8558-443c-b830-f8b90d7d35ab.png)
+
 
 Click on Save & Visualise
 
@@ -113,7 +131,7 @@ Drag data_timestamp to x-axis and value to y-axis. Change he Aggregate to Averag
 
 <img width="902" alt="Screenshot 2021-11-21 at 23 33 49" src="https://user-images.githubusercontent.com/81493814/142783383-469b3f38-4987-402f-9bee-ea26656c1531.png">
 
-Try changing the x-axis aggregate to hour to get a much more granular view of the variation of value(throughput).
+Try changing the x-axis aggregate to hour to get a much more granular view of the variation of value(throughput) the same way as you changed the aggregate on the y-axis in the above step.
 
 <img width="574" alt="Screenshot 2021-11-21 at 23 35 18" src="https://user-images.githubusercontent.com/81493814/142783437-b7b52a8e-839e-4701-ad62-cfab49002487.png">
 
@@ -155,5 +173,10 @@ Change the aggregate to Average
 This comes up with a narrative forecast as follows:
 
 <img width="555" alt="Screenshot 2021-11-21 at 23 45 52" src="https://user-images.githubusercontent.com/81493814/142783836-988151b7-e369-462b-a43d-ef8418ddfbca.png">
+
+You can now save this analysis by clicking on **Save as** at the top right.
+
+![image (9)](https://user-images.githubusercontent.com/81493814/143496603-9d8cb615-343b-4197-8a0f-397414dd505f.png)
+
 
 **Congratulations!!** You have now been able to forecast the average throughtput on the n3 interface using Amazon Quicksight ML insights. As you see you have been able to do this without needing to do any data preparation or feature engineering or training and testing an ML model. This demonstrates how the power of pre-trained Random cut forest ML models has been placed in the hands of everyday BI users.
