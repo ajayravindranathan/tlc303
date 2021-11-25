@@ -6,8 +6,7 @@ Welcome to the use cases section of the workshop. In this section you will use t
 
 https://github.com/ajayravindranathan/tlc303/blob/main/Use%20case%201-%20Throughtput_Forecast_using_QuickSight_ML_Insights.md
 
-## Use case 2 - Anomaly Detection using Amazon Sagemaker Random Cut Forest model
-
+## Use case 2 - Anomaly Detection using quicksight
 ## Use case 3 - Customer churn prediction using network and customer data with Amazon Sagemaker xgboost binary classification model
 
 https://github.com/ajayravindranathan/tlc303/blob/main/UseCase%203%20-%20Customer%20Churn%20Prediction%20using%20Network%20and%20Customer%20data.md
