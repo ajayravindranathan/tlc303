@@ -1,4 +1,4 @@
-# TLC303 - Usecase 2 - Throughput Forecasting
+# TLC303 - Usecase 1 - Throughput Forecasting
 
 The 5G N3 interface performs the role of conveying user data from the RAN to the User Plane Function, making it possible to create both low- and high-latency services. The throughput of the N3 interface is a key measure when it comes to a 5G network and it is important to forecast any bottlenecks on this interface.
 
