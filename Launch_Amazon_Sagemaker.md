@@ -34,7 +34,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 <img width="846" alt="Screenshot 2021-11-20 at 08 10 12" src="https://user-images.githubusercontent.com/81493814/142719392-0eabde8a-e033-49e4-b0db-3c284e04bcf7.png">
 
 
-7. Keep the default and click Create Role.
+7. Select Any S3 bucket and click Create Role.
 
 ![image](https://user-images.githubusercontent.com/81493814/142718925-cf71a6d0-bac6-4dd4-a354-68dd51865abf.png)
 
