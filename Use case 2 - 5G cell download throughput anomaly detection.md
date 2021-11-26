@@ -18,10 +18,12 @@ b. Give a name for the dataset as shown below and click on Create data source.
 
 
 c. Click on the usecase 2 table and then click select. The name of the usecase 2 table may be different when you run this workshop.
+
 <img width="596" alt="Screenshot 2021-11-26 at 13 33 59" src="https://user-images.githubusercontent.com/81493814/143588851-a5138c5e-653f-477c-9048-56f7e7b2dff8.png">
 
 
 d. Click on Visualize
+
 <img width="599" alt="Screenshot 2021-11-26 at 13 34 55" src="https://user-images.githubusercontent.com/81493814/143588976-9598eb57-e317-4b2b-baa1-4377371910f8.png">
 
 
