@@ -24,6 +24,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 <img width="836" alt="Screenshot 2021-11-20 at 08 12 08" src="https://user-images.githubusercontent.com/81493814/142719445-0f5ed7fc-d10a-4b13-a445-538e830eb7e7.png">
 
 
+
 5. Give a name for the user profile as below.
 
 <img width="848" alt="Screenshot 2021-11-20 at 08 04 43" src="https://user-images.githubusercontent.com/81493814/142719257-b45d1c01-cba0-4343-b7b8-94c336924411.png">
@@ -56,10 +57,10 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 
 11. After a few minutes, the state will transition to **Ready**.
 
-![image](https://user-images.githubusercontent.com/81493814/142719016-ba75784b-86d6-409a-ba40-1465477ce710.png)
+<img width="733" alt="Screenshot 2021-11-27 at 00 08 41" src="https://user-images.githubusercontent.com/81493814/143661952-0e385361-5a4a-496d-8fa6-f37ba2a219b8.png">
 
 
-12. Once Amazon SageMaker Studio is ready then click on Open Studio. The page can take 1 or 2 minutes to load when you access SageMaker Studio for the first time.
+12. Once Amazon SageMaker Studio is ready then click drop down on Launch App and then on Studio. The page can take 1 or 2 minutes to load when you access SageMaker Studio for the first time.
 
 ![image](https://user-images.githubusercontent.com/81493814/142719036-f0d23f96-63dd-4121-ac4b-3ddce6bc9e71.png)
 
