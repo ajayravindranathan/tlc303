@@ -6,44 +6,67 @@ This section deals with providing permissions in Lake Formation to the database 
 
 <img width="557" alt="Screenshot 2021-11-20 at 08 47 17" src="https://user-images.githubusercontent.com/81493814/142720378-9ef8fa50-587b-4005-b771-7313d8a23944.png">
 
-2. Navigate to Lakeformation console. Create a local database that will host the resource links of the tables that contain the data required for your machine learning model.
+On the Services search bar, search for IAM and open it in a new tab
 
-Click on Databases on the left hand pane
+Click on Roles on the left pane.
 
-<img width="248" alt="Screenshot 2021-11-20 at 13 45 39" src="https://user-images.githubusercontent.com/81493814/142728627-0b884e12-38be-4d2f-842f-ce6f4fde3aa6.png">
+Search for the Amazon Sagemaker execution role noted in step 1.
 
-Click on Create Database on the top right hand corner.
-
-<img width="765" alt="Screenshot 2021-11-20 at 13 46 40" src="https://user-images.githubusercontent.com/81493814/142728663-a086c25a-f382-4ff8-bfe8-90ef2b23a37e.png">
-
-Give the databse a name for example "local_tlc303" and click "Create database".
+<img width="1914" alt="Screenshot 2021-11-27 at 00 26 27" src="https://user-images.githubusercontent.com/81493814/143662418-7555c0ff-18a2-4ed1-b042-03846463af02.png">
 
 
+Click on the role.
 
-3. Create resource links for the tlc-303 database and the 5g-cell and customer_churn tables. These tables contain the data required for your machine learning model.
+Click on add in-line policy on the right.
 
-
-Navigate to Tables on the left hand pane
-
-<img width="244" alt="Screenshot 2021-11-20 at 13 39 13" src="https://user-images.githubusercontent.com/81493814/142728443-40407ccb-f737-4303-8626-b663cb5eedbf.png">
-
-Select the 5gcell table from list of tables. 
-<img width="1111" alt="Screenshot 2021-11-20 at 14 01 54" src="https://user-images.githubusercontent.com/81493814/142729084-09510d82-2ded-4b21-91e2-b7385828fb6a.png">
-
-Click on Actions on the top pane and then choose "Create resource link".
-
-<img width="164" alt="Screenshot 2021-11-20 at 13 50 31" src="https://user-images.githubusercontent.com/81493814/142728768-9a2a4563-af09-4da3-b61b-f9ebcadda7ab.png">
-
-Provide a name and select the database created in the previous step in the database field.
-
-<img width="692" alt="Screenshot 2021-11-20 at 13 53 08" src="https://user-images.githubusercontent.com/81493814/142728907-4a55baa6-339f-4007-ad44-05da4c008a33.png">
-
-Click create.
-
-**Repeat the above steps for the customer_churn table as well.**
+<img width="1600" alt="Screenshot 2021-11-27 at 00 27 03" src="https://user-images.githubusercontent.com/81493814/143662427-ed6eebf0-e2bc-4ef2-9752-8459b8b128af.png">
 
 
-4. Navigate to Data lake permissions on the left hand pane
+Click on JSON tab 
+
+<img width="1294" alt="Screenshot 2021-11-27 at 00 27 48" src="https://user-images.githubusercontent.com/81493814/143662436-f22c0cce-3916-4c61-ba1d-f6a71a4386aa.png">
+
+
+Replace json in the box with the json shown below:
+
+```{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "lakeformation:GetResourceLFTags",
+                "glue:SearchTables",
+                "glue:GetDatabase",
+                "lakeformation:SearchDatabasesByLFTags",
+                "glue:GetTables",
+                "lakeformation:GetDataAccess",
+                "glue:GetPartitions",
+                "lakeformation:SearchTablesByLFTags",
+                "lakeformation:ListLFTags",
+                "lakeformation:GetLFTag",
+                "glue:GetDatabases",
+                "glue:GetTable",
+                "glue:CreateDatabase"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+Click on review policy.
+
+
+Name the policy SagemakerLakeFormationPolicy. Click on Create Policy. The policy should now appear in the list of policies on the role.
+
+<img width="1610" alt="Screenshot 2021-11-27 at 00 33 43" src="https://user-images.githubusercontent.com/81493814/143662583-cc49896b-6269-47a3-884f-6f270de30916.png">
+
+
+
+
+
+2. Navigate to Lakeformation console. Navigate to Data lake permissions on the left hand pane
 
 <img width="250" alt="Screenshot 2021-11-20 at 13 16 22" src="https://user-images.githubusercontent.com/81493814/142727756-66587469-ba69-4544-8c4c-362a344c4556.png">
 
@@ -52,15 +75,19 @@ Click on Grant on the top right hand corner
 
 <img width="1118" alt="Screenshot 2021-11-20 at 13 17 25" src="https://user-images.githubusercontent.com/81493814/142727796-51d4be5d-8552-4e84-ac6e-ce364b1cbc77.png">
 
-Search and select the Sagemaker execution role in the IAM users and roles field. Choose Named data and catalog resources in the LF-Tags or catalog resources section. Choose the database that was created in Step 2 above in the databases field. Select the resource links that you created in step 3 in the tables field.
+Search and select the Sagemaker execution role in the IAM users and roles field. Choose Named data and catalog resources in the LF-Tags or catalog resources section. Choose the database that was created by the datamesh scripts.
 
-<img width="747" alt="Screenshot 2021-11-20 at 14 14 25" src="https://user-images.githubusercontent.com/81493814/142729518-c4679a1b-a984-45c4-92e5-700314712208.png">
+Select the tables for use case 3 usecase3_5gcell and usecase3_customerchurn in the Tables field.
 
-Select "Select" and "Describe" as the Resource link permissions.
+<img width="930" alt="Screenshot 2021-11-27 at 00 39 45" src="https://user-images.githubusercontent.com/81493814/143662718-b652b814-2bf5-478d-bde6-02a1f44df92e.png">
 
-<img width="719" alt="Screenshot 2021-11-20 at 14 18 13" src="https://user-images.githubusercontent.com/81493814/142729628-e5e96dc3-cac9-4696-a81b-7d543eabc32d.png">
 
-Leave All data access selected in the Data permissions section and click **Create**. 
+
+Select "Select" and "Describe" as the Table permissions.
+
+<img width="830" alt="Screenshot 2021-11-27 at 00 41 47" src="https://user-images.githubusercontent.com/81493814/143662745-8b1c1685-9b67-4242-8108-c9b96c35f3b0.png">
+
+Click on Grant.
 
 
 5. Navigate to the LakeFormation console and click on "Administrative roles and tasks" on the left pane
