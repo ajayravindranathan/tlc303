@@ -1,4 +1,4 @@
-# TLC303 - UC1 - Data preparation and Feature engineering using Amazon Sagemaker Data Wrangler and Amazon Sagemaker Feature Store
+# TLC303 - UC3 - Data preparation and Feature engineering using Amazon Sagemaker Data Wrangler and Amazon Sagemaker Feature Store
 
 Without good data, machine learning models are pretty much rendered powerless. Hence, data preperation is a critical step in the machine learning lifecycle.
 In this section, we use the Data Wrangler module within Amazon Sagemaker to visually prepare and transform the data with the goal of preparing features that can be used by the xgboost model.
@@ -29,7 +29,9 @@ You can rename the newly created Flow by right-clicking on the tab. Provide any 
 
 3. Select the data catalog and the database that was created in the Datamesh setup lab. You should be able to see the tables on the right hand side as below - 
 
-<img width="1513" alt="Screenshot 2021-11-21 at 07 54 24" src="https://user-images.githubusercontent.com/81493814/142754251-a09cf878-2b7e-4bab-92e5-87517683def6.png">
+
+<img width="1400" alt="Screenshot 2021-11-27 at 00 49 14" src="https://user-images.githubusercontent.com/81493814/143662945-c57ac3ad-0be2-43ea-99cc-f8db7e139026.png">
+
 
 Please note that the database and the tables will not appear if the permissions were not provided correctly on LakeFormation. Also, you should be able to see only the databases and tables that you provided permissions for in the previous step.
 
@@ -38,7 +40,8 @@ Please note that the database and the tables will not appear if the permissions 
 
 `select * from <table_name>`
 
-<img width="1509" alt="Screenshot 2021-11-21 at 08 10 46" src="https://user-images.githubusercontent.com/81493814/142754685-c40dd663-f666-4257-b45c-f59b0bc21623.png">
+<img width="1403" alt="Screenshot 2021-11-27 at 00 50 05" src="https://user-images.githubusercontent.com/81493814/143662963-a544d131-d30d-43c8-be16-129562278ffa.png">
+
 
 Unselect Enable Sampling as the data you are working with in this workshop in not too large. Sampling is checked by default assuming very large datasets (multiple GBs/TBs).
 
@@ -60,9 +63,14 @@ Once validation is successful, you should see the screen as follows:
 
 
 5. Repeat the steps in step 4 for the customer churn table as well.
+
+<img width="1357" alt="Screenshot 2021-11-27 at 00 53 02" src="https://user-images.githubusercontent.com/81493814/143663034-f6e37ce1-12a7-4b22-a5af-66dd30f8b8e4.png">
+
+
 The screen should look as follows once you have finished this successfully:
 
 <img width="1494" alt="Screenshot 2021-11-21 at 08 38 14" src="https://user-images.githubusercontent.com/81493814/142755431-b9a4c732-6a1d-4778-834d-e053fa2d2e1c.png">
+
 
 6. Let us now inspect both datasets.
 
@@ -124,14 +132,14 @@ e. Add the following query in the empty window as shown in the screenshot.
 
 ```
 select location, 
-avg(5g_ran_health_index_mwc_1),
-avg(5g_availability_mwc_1),
-avg(5g_accessibility_mwc_1),
-avg(5g_mobility_mwc_1),
-avg(5g_retainability_mwc_1),
-avg(5g_cell_downlink_avg_throughput_den_huaw),
-avg(5g_cell_uplink_avg_throughput_den_huaw),
-avg(5g_user_downlink_avg_throughput_den_huaw)
+avg(5g_ran_health_index_mwc_1) as avg_5g_ran_health_index_mwc_1,
+avg(5g_availability_mwc_1) as avg_5g_availability_mwc_1,
+avg(5g_accessibility_mwc_1) as avg_5g_accessibility_mwc_1,
+avg(5g_mobility_mwc_1) as avg_5g_mobility_mwc_1,
+avg(5g_retainability_mwc_1) as avg_5g_retainability_mwc_1,
+avg(5g_cell_downlink_avg_throughput_den_huaw) as avg_5g_cell_downlink_avg_throughput_den_huaw,
+avg(5g_cell_uplink_avg_throughput_den_huaw) as avg_5g_cell_uplink_avg_throughput_den_huaw,
+avg(5g_user_downlink_avg_throughput_den_huaw) as avg_5g_user_downlink_avg_throughput_den_huaw
 from df
 group by location
 ```
@@ -182,9 +190,9 @@ Choose the following options:
 
 Click on Preview. Then click on Add.
 
-Repeat the above steps for vmail_plan column as well.
+**Repeat the above steps for vmail_plan column as well.**
 
-b. Next add a Custom Pandas transform in order to:
+b. Next add a Custom Transform and select Python (Pandas) in order to:
  i. Replace the churn values  - True. with 1 and False. with 0
  ii. Replace the '-' in the phone number with '' to make it a number.
  iii. Add 2 columns 'FS_ID' and 'FS_time'. These columns are required in order to export the features to the feature store.
