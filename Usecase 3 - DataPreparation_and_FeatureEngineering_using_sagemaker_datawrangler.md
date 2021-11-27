@@ -224,6 +224,39 @@ e. Vectorise the column location_0 using the following options:
 
 f. Drop column location_0 usingthe drop column transform.
 
+g. We now need to vectorize the only text coloumn in the dataset as the xgboost model can work on only numerical data
+
+Click on the + sin after the flow and click on Add transform
+
+<img width="1344" alt="Screenshot 2021-11-27 at 02 18 05" src="https://user-images.githubusercontent.com/81493814/143665046-ebfc6cad-282d-4bff-ba3b-818adbfb8658.png">
+
+Click on Add step
+
+<img width="510" alt="Screenshot 2021-11-27 at 02 18 23" src="https://user-images.githubusercontent.com/81493814/143665049-7f690651-e32c-4d19-93a6-a0e23a6549bc.png">
+
+Choose Featurize Text:
+
+<img width="478" alt="Screenshot 2021-11-27 at 02 19 29" src="https://user-images.githubusercontent.com/81493814/143665068-8e38fade-09fb-4de5-bba8-d839739c0b57.png">
+
+
+Choose Vectorize on the transform field, choose Standard tokenizer, On the input column please choose location_0, on the output format choose columns, and finally click on Preview
+
+<img width="460" alt="Screenshot 2021-11-27 at 02 23 15" src="https://user-images.githubusercontent.com/81493814/143665205-9fefae78-c9cd-45f1-a0ef-3100b2876a88.png">
+
+<img width="447" alt="Screenshot 2021-11-27 at 02 23 36" src="https://user-images.githubusercontent.com/81493814/143665227-4928ed54-9af8-4af6-b33d-ba8e2cb31541.png">
+
+Click on Add.
+
+Then click on Add step.
+
+Choose Manage Columns. Choose Drop columns. Choose location_0 in the columns to drop field.
+
+<img width="465" alt="Screenshot 2021-11-27 at 02 25 05" src="https://user-images.githubusercontent.com/81493814/143665281-553a6d15-0161-4ad3-a5b3-3d9041b55da0.png">
+
+Click on preview and then Add.
+
+<img width="449" alt="Screenshot 2021-11-27 at 02 24 00" src="https://user-images.githubusercontent.com/81493814/143665238-367ccd4a-30a1-419a-9a3e-2c44d05914fb.png">
+
 
 13. Export the featuures to the Feature Store
 
