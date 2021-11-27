@@ -6,7 +6,7 @@ Welcome to the use cases section of the workshop. In this section you will use t
 
 https://github.com/ajayravindranathan/tlc303/blob/main/Use%20case%201-%20Throughtput_Forecast_using_QuickSight_ML_Insights.md
 
-## Use case 2 - Anomaly Detection using quicksight
+## Use case 2 - Anomaly Detection using QuickSight ML Insights
 
 https://github.com/ajayravindranathan/tlc303/blob/main/Use%20case%202%20-%205G%20cell%20download%20throughput%20anomaly%20detection.md
 
