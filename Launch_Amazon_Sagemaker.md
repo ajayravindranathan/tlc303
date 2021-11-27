@@ -14,7 +14,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 ![image](https://user-images.githubusercontent.com/81493814/142717644-c502c03f-3dfb-4d56-a0d1-80ff40b11250.png)
 
 
-3. Click on Amazon SageMaker Studio (first option on the left pane or orange button on the right).
+3. Right - Click on Amazon SageMaker Studio (first option on the left pane or orange button on the right) and open it on a new tab.
 
 <img width="1266" alt="Screenshot 2021-11-20 at 06 58 16" src="https://user-images.githubusercontent.com/81493814/142717743-8ce4ec15-1dee-49c5-83fa-aff78ed7cae4.png">
 
