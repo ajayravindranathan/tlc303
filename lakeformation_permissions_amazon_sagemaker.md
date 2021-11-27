@@ -105,3 +105,8 @@ On the below screen shot choose the Sagemaker execution role from the list of IA
 Click on Grant.
 
 **Congratulations!!** You have now provided the required permissions for Sagemaker to ingest data, run feature engineering tasks, train and test the model, and finally deploy a real-time endpoint for inference. 
+
+Proceed to step 3 by clicking on the following link:
+
+https://github.com/ajayravindranathan/tlc303/blob/main/DataPreparation_and_FeatureEngineering_using_sagemaker_datawrangler.md
+
