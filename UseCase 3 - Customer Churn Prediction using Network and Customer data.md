@@ -46,7 +46,9 @@ Update this cell in the xgboost model notebook:
 
 <img width="1177" alt="Screenshot 2021-11-21 at 16 38 20" src="https://user-images.githubusercontent.com/81493814/142770818-a89b00b5-bb2d-4f69-a4a2-83f410798dbb.png">
 
-  7. Follow along the steps in the Sagemaker notebook. Enjoy!
+  7. Run the cells from the first cell in your Sagemaker notebook one by one by using Shift+Enter on your keyboard . 
+ 
+ All cells have descriptive explanation as to what is happening in each cell. Enjoy!
 
 You should see an output something like this at the end of the 'Evaluation' section if your execution was successful.
 
