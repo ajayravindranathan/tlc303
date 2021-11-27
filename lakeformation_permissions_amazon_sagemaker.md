@@ -1,4 +1,4 @@
-# TLC303 - Use case 1 - Grant required permissions to Amazon Sagemaker using AWS LakeFormation
+# TLC303 - Use case 3 - Grant required permissions to Amazon Sagemaker using AWS LakeFormation
 
 This section deals with providing permissions in Lake Formation to the database and the tables to Amazon Sagemaker so that the xgboost model in Sagemaker can access the catalog and the underlying data from the producer account.
 
