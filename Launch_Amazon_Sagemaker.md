@@ -85,4 +85,6 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 
 
 **Congratulations!!** You have successfully created a SageMaker Studio domain and launched a SageMaker Studio Notebook.
-Please carry on to step 2.
+Please carry on to step 2 by clicking on the below link:
+
+https://github.com/ajayravindranathan/tlc303/blob/main/lakeformation_permissions_amazon_sagemaker.md
