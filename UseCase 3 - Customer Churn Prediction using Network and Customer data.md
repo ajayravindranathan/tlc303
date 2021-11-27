@@ -35,6 +35,23 @@ The actual steps to perform are as follows:
 
 <img width="407" alt="Screenshot 2021-11-18 at 11 47 24" src="https://user-images.githubusercontent.com/81493814/142409787-e9e31b09-1d9b-4e8b-863c-fd857ce79a5f.png">
 
+If in case this does not come up automatically, then follow these steps:
+
+Click on Edit and then choose Select all cells.
+
+<img width="306" alt="Screenshot 2021-11-27 at 01 24 20" src="https://user-images.githubusercontent.com/81493814/143663913-51eae900-82e1-4635-aa05-1855307cdb1c.png">
+
+
+Then click on Edit and select Copy Cells.
+
+<img width="292" alt="Screenshot 2021-11-27 at 01 25 27" src="https://user-images.githubusercontent.com/81493814/143663936-3e256c44-4def-4663-8f27-41fb2d106622.png">
+
+
+Navigate to the empty notebook you created in step 1 of this use case. Then click on Edit and then Paste cells below:
+
+<img width="1853" alt="Screenshot 2021-11-27 at 01 26 35" src="https://user-images.githubusercontent.com/81493814/143663969-c0884a89-2f7b-4a2a-a2fc-8f37d8eef908.png">
+
+
   5. Update the feature group name with the name of the feature group created in the previous step. You can check the name of the feature group on the Sagemaker Studio console as shown in the screen shots below:
  
  <img width="466" alt="Screenshot 2021-11-21 at 16 35 50" src="https://user-images.githubusercontent.com/81493814/142770712-d527f708-f9ab-4ff8-90c5-d6770fda08ff.png">
