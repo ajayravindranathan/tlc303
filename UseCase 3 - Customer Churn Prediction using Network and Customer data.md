@@ -15,7 +15,7 @@ https://github.com/ajayravindranathan/tlc303/blob/main/lakeformation_permissions
 
 **3. Feature Engineering and feature export to Sagemaker Feature Store using Amazon Sagemaker Data Wrangler**
 
-https://github.com/ajayravindranathan/tlc303/blob/main/DataPreparation_and_FeatureEngineering_using_sagemaker_datawrangler.md
+https://github.com/ajayravindranathan/tlc303/blob/main/Usecase%203%20-%20DataPreparation_and_FeatureEngineering_using_sagemaker_datawrangler.md
 
 **6. Build, Train and Test your xgboost model**
 
