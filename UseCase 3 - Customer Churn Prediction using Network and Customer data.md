@@ -17,7 +17,7 @@ https://github.com/ajayravindranathan/tlc303/blob/main/lakeformation_permissions
 
 https://github.com/ajayravindranathan/tlc303/blob/main/Usecase%203%20-%20DataPreparation_and_FeatureEngineering_using_sagemaker_datawrangler.md
 
-**6. Build, Train and Test your xgboost model**
+**4. Build, Train and Test your xgboost model**
 
 https://github.com/ajayravindranathan/tlc303/blob/main/Usecase%203-%20Build%20Train%20and%20Deploy%20the%20xgboost%20model.md
 
