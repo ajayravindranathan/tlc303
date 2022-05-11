@@ -108,5 +108,5 @@ Click on Grant.
 
 Proceed to step 3 by clicking on the following link:
 
-https://github.com/ajayravindranathan/tlc303/blob/main/DataPreparation_and_FeatureEngineering_using_sagemaker_datawrangler.md
+https://github.com/ajayravindranathan/tlc303/blob/main/Usecase%203%20-%20DataPreparation_and_FeatureEngineering_using_sagemaker_datawrangler.md
 
