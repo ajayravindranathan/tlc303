@@ -80,7 +80,7 @@ Here are the one-time steps for onboarding to Amazon SageMaker Studio using Quic
 ![image](https://user-images.githubusercontent.com/81493814/142719107-dede25cb-523f-4eb0-8e44-dd46afd95680.png)
 
 
-16. You can rename the notebook by right clicking on the name.
+16. You can rename the notebook to something identifiable such as CustomerChurnModel by right clicking on the tab name.
 
 ![image](https://user-images.githubusercontent.com/81493814/142719135-f51183bd-019e-4a30-bf1f-af21ce462d8c.png)
 
