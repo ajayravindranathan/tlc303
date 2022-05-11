@@ -296,3 +296,7 @@ Now you can run all cells and await the completion of the Jupyter notebook. Succ
 <img width="1354" alt="Screenshot 2021-11-21 at 16 24 52" src="https://user-images.githubusercontent.com/81493814/142770326-7e44c6cb-2838-4404-b047-ad5b591f222a.png">
 
 **Congratulations!!** You have completed Feature Engineering and have your features ready to be used from the Amazon Feature Store.
+
+Please carry on to Build, Train and Test your xgboost model by clicking the following link:
+
+https://github.com/ajayravindranathan/tlc303/blob/main/Usecase%203-%20Build%20Train%20and%20Deploy%20the%20xgboost%20model.md
