@@ -66,21 +66,27 @@ Name the policy SagemakerLakeFormationPolicy. Click on Create Policy. The policy
 
 
 
-2. Navigate to Lakeformation console. Navigate to Data lake permissions on the left hand pane
-
-<img width="250" alt="Screenshot 2021-11-20 at 13 16 22" src="https://user-images.githubusercontent.com/81493814/142727756-66587469-ba69-4544-8c4c-362a344c4556.png">
+2. Navigate to Lakeformation console. Navigate to Databases on the left hand pane
 
 
-Click on Grant on the top right hand corner
+<img width="926" alt="Screenshot 2022-05-11 at 04 40 02" src="https://user-images.githubusercontent.com/81493814/167819695-ae86531c-4915-4f02-a501-030a48c48811.png">
 
-<img width="1118" alt="Screenshot 2021-11-20 at 13 17 25" src="https://user-images.githubusercontent.com/81493814/142727796-51d4be5d-8552-4e84-ac6e-ce364b1cbc77.png">
 
-Search and select the Sagemaker execution role in the IAM users and roles field. Choose Named data and catalog resources in the LF-Tags or catalog resources section. Choose the database that was created by the datamesh scripts.
+Select the resource link, which is the row in Italics. Then click on Actions -> Grant on the top right hand corner
 
-Select the tables for use case 3 usecase3_5gcell and usecase3_customerchurn in the Tables field.
+<img width="1011" alt="Screenshot 2022-05-11 at 04 41 49" src="https://user-images.githubusercontent.com/81493814/167820047-a5f6565a-4013-4bf7-8422-4b92712dc86e.png">
+
+
+Search and select the Sagemaker execution role in the IAM users and roles field. 
+
+Select the tables for use case 3 usecase3_a_customer_churn_prediction and usecase3_b_customer_churn_prediction in the Tables field.
+
+
+<img width="729" alt="Screenshot 2022-05-11 at 04 46 02" src="https://user-images.githubusercontent.com/81493814/167820856-d44d02f2-b7d8-42cd-965b-952eb061d13f.png">
 
 <img width="930" alt="Screenshot 2021-11-27 at 00 39 45" src="https://user-images.githubusercontent.com/81493814/143662718-b652b814-2bf5-478d-bde6-02a1f44df92e.png">
 
+<img width="1117" alt="Screenshot 2022-05-11 at 04 36 46" src="https://user-images.githubusercontent.com/81493814/167819080-ab0f363c-00d2-405f-b88a-00a8572a0787.png">
 
 
 Select "Select" and "Describe" as the Table permissions.
