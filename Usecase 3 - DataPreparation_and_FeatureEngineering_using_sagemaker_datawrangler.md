@@ -217,14 +217,9 @@ c. Move the FS_ID and FS_time to the start of the columns. Please use the move c
 
 d. Drop the location_1 column as there are 2 coulmns location_0 and location_1, which are duplicates. Use the drop column transform to achieve this.
 
-e. Vectorise the column location_0 using the following options:
+e. Drop column location_0 usingthe drop column transform.
 
-<img width="369" alt="Screenshot 2021-11-21 at 15 59 33" src="https://user-images.githubusercontent.com/81493814/142769342-f3b104a8-d3cc-43f3-8766-614f5f73614b.png">
-<img width="367" alt="Screenshot 2021-11-21 at 15 59 49" src="https://user-images.githubusercontent.com/81493814/142769350-3d428934-a727-40a5-b0a5-383c1f4315a4.png">
-
-f. Drop column location_0 usingthe drop column transform.
-
-g. We now need to vectorize the only text coloumn in the dataset as the xgboost model can work on only numerical data
+f. We now need to vectorize the only text coloumn in the dataset as the xgboost model can work on only numerical data
 
 Click on the + sin after the flow and click on Add transform
 
@@ -247,9 +242,7 @@ Choose Vectorize on the transform field, choose Standard tokenizer, On the input
 
 Click on Add.
 
-Then click on Add step.
-
-Choose Manage Columns. Choose Drop columns. Choose location_0 in the columns to drop field.
+g. Then click on Add step. Choose Manage Columns. Choose Drop columns. Choose location_0 in the columns to drop field.
 
 <img width="465" alt="Screenshot 2021-11-27 at 02 25 05" src="https://user-images.githubusercontent.com/81493814/143665281-553a6d15-0161-4ad3-a5b3-3d9041b55da0.png">
 
