@@ -84,10 +84,6 @@ Select the tables for use case 3 usecase3_a_customer_churn_prediction and usecas
 
 <img width="729" alt="Screenshot 2022-05-11 at 04 46 02" src="https://user-images.githubusercontent.com/81493814/167820856-d44d02f2-b7d8-42cd-965b-952eb061d13f.png">
 
-<img width="930" alt="Screenshot 2021-11-27 at 00 39 45" src="https://user-images.githubusercontent.com/81493814/143662718-b652b814-2bf5-478d-bde6-02a1f44df92e.png">
-
-<img width="1117" alt="Screenshot 2022-05-11 at 04 36 46" src="https://user-images.githubusercontent.com/81493814/167819080-ab0f363c-00d2-405f-b88a-00a8572a0787.png">
-
 
 Select "Select" and "Describe" as the Table permissions.
 
